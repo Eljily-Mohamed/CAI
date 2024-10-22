@@ -56,7 +56,7 @@ function LeftSidebar({ children, activeChild, name }) {
                   {userName}
                 </span>
                 <Link // Use Link for profile view
-                  to="/profile"
+                  to="/Profile"
                   className="block mt-px text-gray-600 hover:text-indigo-600 text-xs"
                 >
                   View profile
