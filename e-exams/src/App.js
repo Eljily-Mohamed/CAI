@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import the AuthProvider
 import { AuthProvider } from "./contexts/AuthContext";
@@ -29,7 +29,7 @@ function App() {
           <Route path="/pre-exam" element={<PreExam />} />
           <Route path="/exam" element={<Exam />} />
           <Route path="/profile" element={<Profile />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          {/* <Route path="*" element={<NotFound />} /> Catch all unmatched routes */}
         </Routes>
       </Router>
     </AuthProvider>
