@@ -7,7 +7,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Importing ico
 
 function LeftSidebar({ children, activeChild }) {
   const { userName } = useAuth();
-  const [isOpen, setIsOpen] = useState(true); // State to manage sidebar visibility
+  const [isOpen, setIsOpen] = useState(false); // State to manage sidebar visibility
 
   const renderChildren = () => {
     return React.Children.map(children, (child) => {
