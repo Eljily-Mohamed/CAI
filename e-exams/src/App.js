@@ -1,7 +1,6 @@
-// src/App.js
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import the AuthProvider
 import { AuthProvider } from "./contexts/AuthContext";
@@ -15,7 +14,7 @@ import { Contact } from "./pages/Contact";
 import { Signup } from "./pages/Signup";
 import { PreExam } from "./pages/PreExam";
 import { Profile } from "./pages/Profile";
-//import NotFound from "./pages/NotFound"; // Import NotFound component
+// import NotFound from "./pages/NotFound"; // Import NotFound component
 
 function App() {
   return (
@@ -30,7 +29,7 @@ function App() {
           <Route path="/pre-exam" element={<PreExam />} />
           <Route path="/exam" element={<Exam />} />
           <Route path="/profile" element={<Profile />} />
-          {/* <Route path="*" element={<NotFound />} /> Catch all unmatched routes */}
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </Router>
     </AuthProvider>
