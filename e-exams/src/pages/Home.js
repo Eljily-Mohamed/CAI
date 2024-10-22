@@ -24,12 +24,12 @@ export function Home() {
       {/* Left Sidebar */}
       <div className="w-1/6 flex-shrink-0">
         <LeftSidebar activeChild={activeChild}>
-          <div href="/home" name="Accueil" icon={<FontAwesomeIcon icon={faHome} />} />
-          <div href="/venir" name="À venir" icon={<FontAwesomeIcon icon={faCalendarAlt} />} />
-          <div href="/historique" name="Historique" icon={<FontAwesomeIcon icon={faHistory} />} />
-          <div href="/stats" name="Statistiques" icon={<FontAwesomeIcon icon={faChartLine} />} />
-          <div href="/reglages" name="Réglages" icon={<FontAwesomeIcon icon={faCog} />} />
-          <div href="/contact" name="Contact" icon={<FontAwesomeIcon icon={faEnvelope} />} />
+          <div href="/Home" name="Accueil" icon={<FontAwesomeIcon icon={faHome} />} />
+          <div href="/Venir" name="À venir" icon={<FontAwesomeIcon icon={faCalendarAlt} />} />
+          <div href="/Historique" name="Historique" icon={<FontAwesomeIcon icon={faHistory} />} />
+          <div href="/Stats" name="Statistiques" icon={<FontAwesomeIcon icon={faChartLine} />} />
+          <div href="/Reglages" name="Réglages" icon={<FontAwesomeIcon icon={faCog} />} />
+          <div href="/Contact" name="Contact" icon={<FontAwesomeIcon icon={faEnvelope} />} />
         </LeftSidebar>
       </div>
 

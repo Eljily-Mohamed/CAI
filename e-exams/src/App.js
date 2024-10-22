@@ -21,14 +21,14 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/stats" element={<Statistics />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Stats" element={<Statistics />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/" element={<Auth />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/pre-exam" element={<PreExam />} />
-          <Route path="/exam" element={<Exam />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Pre-exam" element={<PreExam />} />
+          <Route path="/Exam" element={<Exam />} />
+          <Route path="/Profile" element={<Profile />} />
           {/* <Route path="*" element={<NotFound />} /> Catch all unmatched routes */}
         </Routes>
       </Router>
