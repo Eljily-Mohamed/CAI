@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useAuth } from '../contexts/AuthContext'; 
 import UpcomingExam from "../components/UpcomingExam.js";
 import RightSidebar from "../components/RightSideBar";
@@ -7,22 +6,21 @@ import LeftSidebar from "../components/LeftSidebar.js";
 import Header from "../components/Header";
 import CardToDayExam from "../components/CardToDayExam";
 
-//fonts
+// Fonts
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCalendarAlt, faHistory, faChartLine, faCog, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-// data from help.js
-import {todayExam, upcomingExams, pastExams } from '../helpers/exams';
-
+// Data from helpers
+import { todayExam, upcomingExams, pastExams } from '../helpers/exams';
 
 export function Home() {
   const activeChild = "Accueil"; 
-  const {userName} = useAuth();
+  const { userName } = useAuth();
 
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col md:flex-row h-screen">
       {/* Left Sidebar */}
-      <div className="w-1/6 flex-shrink-0">
+      <div className="md:flex md:w-1/6 flex-shrink-0">
         <LeftSidebar activeChild={activeChild}>
           <div href="/Home" name="Accueil" icon={<FontAwesomeIcon icon={faHome} />} />
           <div href="/Venir" name="À venir" icon={<FontAwesomeIcon icon={faCalendarAlt} />} />
@@ -34,22 +32,26 @@ export function Home() {
       </div>
 
       {/* Main content area */}
-      <div className="flex flex-col ">
+      <div className="flex flex-col flex-1 overflow-y-auto">
         {/* Header */}
         <Header name={userName} />
+        
         {/* Main page content */}
-        <div className="flex-1 p-2 sm:h-[600px] md:h-[768px] lg:h-[800px] xl:h-[900px] xl:w-[1200px] ml-20">
-          <CardToDayExam exam={todayExam} />
-        </div>
-        <div className="flex-1 p-2 sm:h-[600px] md:h-[768px] lg:h-[800px] xl:h-[900px] xl:w-[1200px] ml-20 mt-[10px] ">
-          <UpcomingExam title="Examens à venir" link="/venir" exams={upcomingExams} />
-        </div>
-        <div className="flex-1 p-2 sm:h-[600px] md:h-[768px] lg:h-[800px] xl:h-[900px] xl:w-[1200px] ml-20 mt-[10px] ">
-          <UpcomingExam title="Examens passés" link="/historique" exams={pastExams} />
+        <div className="flex flex-col flex-1 p-4 space-y-4">
+          <div className="flex-1">
+            <CardToDayExam exam={todayExam} />
+          </div>
+          <div className="flex-1">
+            <UpcomingExam title="Examens à venir" link="/venir" exams={upcomingExams} />
+          </div>
+          <div className="flex-1">
+            <UpcomingExam title="Examens passés" link="/historique" exams={pastExams} />
+          </div>
         </div>
       </div>
 
-      <div className="flex-shrink-0">
+      {/* Right Sidebar */}
+      <div className="hidden md:flex md:flex-shrink-0">
         <RightSidebar/>          
       </div>
     </div>

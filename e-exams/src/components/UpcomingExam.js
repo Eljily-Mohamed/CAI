@@ -10,9 +10,9 @@ const UpcomingExam = ({ title, link, exams }) => {
       if (window.innerWidth < 640) {
         setVisibleExams(1); 
       } else if (window.innerWidth < 1024) {
-        setVisibleExams(3); 
+        setVisibleExams(2); // Adjusted to show 2 exams on medium screens
       } else {
-        setVisibleExams(4);
+        setVisibleExams(3); // Show 3 exams on larger screens
       }
     };
 
@@ -38,7 +38,7 @@ const UpcomingExam = ({ title, link, exams }) => {
       {/* Title and link */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold">{title}</h2>
-        <a href={link} className="text-sm text-orange-500">voir plus &gt;</a>
+        <a href={link} className="text-sm text-orange-500 hover:underline">voir plus &gt;</a>
       </div>
 
       {/* Cards Container */}
@@ -72,14 +72,14 @@ const UpcomingExam = ({ title, link, exams }) => {
         <button
           onClick={handlePrev}
           disabled={currentIndex === 0}
-          className="bg-gray-300 p-2 rounded-full mx-2 disabled:opacity-50"
+          className="bg-gray-300 p-2 rounded-full mx-2 disabled:opacity-50 hover:bg-gray-400 transition duration-150"
         >
           &lt;
         </button>
         <button
           onClick={handleNext}
           disabled={currentIndex >= exams.length - visibleExams}
-          className="bg-gray-300 p-2 rounded-full mx-2 disabled:opacity-50"
+          className="bg-gray-300 p-2 rounded-full mx-2 disabled:opacity-50 hover:bg-gray-400 transition duration-150"
         >
           &gt;
         </button>
