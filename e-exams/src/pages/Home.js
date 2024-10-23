@@ -6,7 +6,7 @@ import LeftSidebar from "../components/LeftSidebar.js";
 import Header from "../components/Header";
 import CardToDayExam from "../components/CardToDayExam";
 
-// Fonts
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCalendarAlt, faHistory, faChartLine, faCog, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,9 +18,9 @@ export function Home() {
   const { userName } = useAuth();
 
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex flex-col lg:flex-row h-screen">
       {/* Left Sidebar */}
-      <div className="md:flex md:w-1/6 flex-shrink-0">
+      <div className="w-1/5 sm:w-1/5 md:w-1/6 lg:w-1/6 flex-shrink-0">
         <LeftSidebar activeChild={activeChild}>
           <div href="/Home" name="Accueil" icon={<FontAwesomeIcon icon={faHome} />} />
           <div href="/Venir" name="À venir" icon={<FontAwesomeIcon icon={faCalendarAlt} />} />
@@ -51,7 +51,7 @@ export function Home() {
       </div>
 
       {/* Right Sidebar */}
-      <div className="hidden md:flex md:flex-shrink-0">
+      <div className="hidden xl:flex xl:w-1/6 xl:flex-shrink-0">
         <RightSidebar/>          
       </div>
     </div>
