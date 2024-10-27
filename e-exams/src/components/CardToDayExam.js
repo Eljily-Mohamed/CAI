@@ -19,7 +19,7 @@ const CardToDayExam = ({ exam }) => {
 
         {/* Access Button */}
         <div className="mt-4 flex-1 flex justify-center">
-          <Link to={`/exam/${exam.id}`}>
+          <Link to={`/pre-exam`}>
             <button className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
               Accès Examen
             </button>

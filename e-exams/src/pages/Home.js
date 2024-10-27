@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCalendarAlt, faHistory, faChartLine, faCog, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 // Data from helpers
-import { todayExam, upcomingExams, pastExams } from '../helpers/exams';
+import { todayExam, upcomingExams, pastExams } from '../data/exams.js';
 
 export function Home() {
   const activeChild = "Accueil"; 

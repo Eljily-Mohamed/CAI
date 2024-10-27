@@ -35,7 +35,7 @@ export function Signup() {
               <div className="py-6 md:py-10 mr-0 md:mr-[180px] mb-[20px]">
                 <h2 className="text-4xl md:text-5xl font-extrabold">
                   <span className="text-black">E-</span>
-                  <span className="text-[#FF735C]">EXAM</span>
+                  <span className="text-indigo-600">EXAM</span>
                 </h2>
                 <p className="text-black text-[20px] ml-[20px] text-left font-semibold">
                   Créer un Compte
@@ -187,7 +187,7 @@ export function Signup() {
                     Conserver ma session
                   </label>
                 </div>
-                <a href="/" className="text-[#FF735C] hover:text-[#ff6e54]">
+                <a href="/" className="text-indigo-600 hover:text-indigo-800">
                   Avez-vous déja un compte ?
                 </a>
               </div>
@@ -195,7 +195,7 @@ export function Signup() {
               {/* Buttons */}
               <div>
               <Link to="/">
-                      <button className="w-full py-3 mb-4 bg-[#FF735C] hover:bg-[#c9452e] text-white text-sm font-bold uppercase tracking-widest rounded-lg">
+                      <button className="w-full py-3 mb-4 bg-indigo-600 hover:bg-indigo-800 text-white text-sm font-bold uppercase tracking-widest rounded-lg">
                         S'inscrire
                       </button>
                    </Link>
