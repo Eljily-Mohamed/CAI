@@ -4,8 +4,8 @@ import {
   AiOutlineBell,
   AiOutlineSetting,
 } from "react-icons/ai";
-import { useAuth } from '../contexts/AuthContext'; // Import the useAuth hook
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useAuth } from "../contexts/AuthContext"; // Import the useAuth hook
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const RightSideBar = () => {
   const { logout } = useAuth();
@@ -13,7 +13,7 @@ const RightSideBar = () => {
 
   const handleLogout = async () => {
     await logout(); // Call the logout function
-    navigate('/'); 
+    navigate("/");
     // Optionally, redirect or show a message after logout
   };
 
@@ -38,8 +38,10 @@ const RightSideBar = () => {
             <AiOutlineSetting size={20} />
           </button>
         </div>
-
-        <button onClick={handleLogout} className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
+        <button
+          onClick={handleLogout}
+          className="w-full py-3 mb-4 bg-indigo-600 hover:bg-indigo-800 text-white text-sm font-bold uppercase tracking-widest rounded-lg"
+        >
           Déconnexion
         </button>
       </div>

@@ -7,8 +7,12 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // Menu icons
 
 function LeftSidebar({ children, activeChild }) {
   const { userName } = useAuth();
-  const [isOpen, setIsOpen] = useState(false); // Sidebar visibility state
+  const [isOpen, setIsOpen] = useState(false); /* Sidebar visibility state */
 
+  /* 
+   * renderChildren: Maps over `children` to render each navigation item as a list element.
+   * Highlights the item if its name matches `activeChild`.
+   */
   const renderChildren = () => {
     return React.Children.map(children, (child) => {
       const isActive = child.props.name === activeChild;
@@ -33,15 +37,15 @@ function LeftSidebar({ children, activeChild }) {
     <>
       {/* Menu button for small screens */}
       <button 
-        className="p-2 rounded-md bg-gray-200 m-2 md:hidden" // Only show on small screens
-        onClick={() => setIsOpen(true)} // Open sidebar
+        className="p-2 rounded-md bg-gray-200 m-2 xl:hidden" /* Only show on small screens */
+        onClick={() => setIsOpen(true)} /* Open sidebar */
       >
         <AiOutlineMenu size={24} />
       </button>
       
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-full bg-white border-r transition-transform transform md:translate-x-0 z-50 ${
+        className={`fixed top-0 left-0 h-full bg-white border-r transition-transform transform xl:translate-x-0 z-50 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         style={{ width: '240px' }}
@@ -53,8 +57,8 @@ function LeftSidebar({ children, activeChild }) {
               <img src={Logo} width={160} className="mx-auto" alt="Logo" />
             </Link>
             <button 
-              className="md:hidden p-2" 
-              onClick={() => setIsOpen(false)} // Close sidebar
+              className="xl:hidden p-2" 
+              onClick={() => setIsOpen(false)} /* Close sidebar */
             >
               <AiOutlineClose size={24} />
             </button>
@@ -83,7 +87,7 @@ function LeftSidebar({ children, activeChild }) {
                   to="/Profile"
                   className="block mt-px text-gray-600 hover:text-indigo-600 text-xs"
                 >
-                  View profile
+                  Voir profil
                 </Link>
               </div>
             </div>
